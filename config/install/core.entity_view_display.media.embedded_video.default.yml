@@ -2,6 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.embedded_video.field_caption
+    - field.field.media.embedded_video.field_credit_organizations
+    - field.field.media.embedded_video.field_credit_people
     - field.field.media.embedded_video.field_media_video_embed_field
     - media_entity.bundle.embedded_video
   module:
@@ -11,6 +14,26 @@ targetEntityType: media
 bundle: embedded_video
 mode: default
 content:
+  field_caption:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_credit_organizations:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_credit_people:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
   field_media_video_embed_field:
     type: video_embed_field_video
     weight: 2
@@ -23,6 +46,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

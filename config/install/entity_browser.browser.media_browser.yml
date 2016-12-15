@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - views
+name: media_browser
+label: 'Media Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select entity'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f942a066-de8f-475c-99fa-63bfa0ea1ffa:
+    settings:
+      view: media
+      view_display: entity_browser_1
+      submit_text: 'Select entity'
+    uuid: f942a066-de8f-475c-99fa-63bfa0ea1ffa
+    weight: 1
+    label: Library
+    id: view

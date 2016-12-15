@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_photo_agency
+    - field.storage.media.field_credit_organizations
     - media_entity.bundle.image
-    - taxonomy.vocabulary.photo_agencies
-id: media.image.field_photo_agency
-field_name: field_photo_agency
+    - taxonomy.vocabulary.organizations
+id: media.image.field_credit_organizations
+field_name: field_credit_organizations
 entity_type: media
 bundle: image
-label: 'Photo agency'
+label: 'Credit (Organizations)'
 description: ''
 required: false
 translatable: false
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      photo_agencies: photo_agencies
+      organizations: organizations
     sort:
       field: _none
     auto_create: true

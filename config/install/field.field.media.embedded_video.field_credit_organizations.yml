@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_credit_organizations
+    - media_entity.bundle.embedded_video
+    - taxonomy.vocabulary.organizations
+id: media.embedded_video.field_credit_organizations
+field_name: field_credit_organizations
+entity_type: media
+bundle: embedded_video
+label: 'Credit (Organizations)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organizations: organizations
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

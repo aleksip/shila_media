@@ -3,9 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_caption
+    - field.field.media.image.field_credit_organizations
+    - field.field.media.image.field_credit_people
     - field.field.media.image.field_image
-    - field.field.media.image.field_photo_agency
-    - field.field.media.image.field_photographer
+    - field.field.media.image.field_image_type
+    - field.field.media.image.field_mime_type
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
@@ -31,6 +33,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+  field_credit_organizations:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_credit_people:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_image:
     weight: 2
     label: above
@@ -39,20 +55,20 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_photo_agency:
-    weight: 5
+  field_image_type:
+    weight: 9
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-  field_photographer:
-    weight: 4
+  field_mime_type:
+    weight: 6
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: string
   name:
     label: hidden
     type: string
@@ -74,4 +90,5 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
