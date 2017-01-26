@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.media
   module:
     - views
 name: media_browser
@@ -21,6 +23,7 @@ widgets:
       view: media
       view_display: entity_browser_1
       submit_text: 'Select entity'
+      auto_select: false
     uuid: f942a066-de8f-475c-99fa-63bfa0ea1ffa
     weight: 1
     label: Library
