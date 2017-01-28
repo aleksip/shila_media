@@ -12,7 +12,27 @@ dependencies:
     - media_entity.bundle.image
     - responsive_image.styles.quarter
   module:
+    - ds
     - responsive_image
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_shila_image
+      path: ''
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      image:
+        - field_image
+      caption:
+        - field_caption
+      credit:
+        - field_credit_people
+        - field_credit_organizations
 id: media.image.quarter
 targetEntityType: media
 bundle: image
@@ -46,15 +66,9 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: responsive_image
-  field_image_type:
-    type: entity_reference_label
-    weight: 2
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
 hidden:
   created: true
+  field_image_type: true
   field_mime_type: true
   langcode: true
   name: true
