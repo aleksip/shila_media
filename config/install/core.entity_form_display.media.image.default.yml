@@ -16,7 +16,28 @@ dependencies:
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
+    - field_group
     - image
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_image_type
+        - field_countries_and_regions
+        - field_keywords
+        - field_topics
+        - field_content_licenses
+        - field_copyright_information
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        label: Metadata
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Metadata
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -35,30 +56,24 @@ content:
     third_party_settings: {  }
     type: string_textarea
   field_content_licenses:
-    weight: 12
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-  field_copyright_information:
     weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_copyright_information:
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
   field_countries_and_regions:
-    weight: 9
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 10
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
   field_credit_organizations:
-    weight: 8
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -66,7 +81,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_credit_people:
-    weight: 7
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -81,26 +96,20 @@ content:
     third_party_settings: {  }
     type: image_image
   field_image_type:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_keywords:
-    weight: 10
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-  field_topics:
     weight: 11
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
+  field_topics:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   langcode:
     type: language_select
     weight: 1

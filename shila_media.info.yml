@@ -6,6 +6,7 @@ dependencies:
   - ds
   - entity_browser
   - field
+  - field_group
   - file
   - image
   - language
