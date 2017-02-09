@@ -11,12 +11,14 @@ dependencies:
     - field.field.media.image.field_image
     - field.field.media.image.field_image_type
     - field.field.media.image.field_keywords
+    - field.field.media.image.field_link
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_topics
     - media_entity.bundle.image
   module:
     - ds
     - image
+    - link
 third_party_settings:
   ds:
     layout:
@@ -100,6 +102,17 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_link:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
   field_topics:
     weight: 11
     label: above

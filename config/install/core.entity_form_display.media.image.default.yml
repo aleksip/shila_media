@@ -11,6 +11,7 @@ dependencies:
     - field.field.media.image.field_image
     - field.field.media.image.field_image_type
     - field.field.media.image.field_keywords
+    - field.field.media.image.field_link
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_topics
     - image.style.thumbnail
@@ -18,6 +19,7 @@ dependencies:
   module:
     - field_group
     - image
+    - link
 third_party_settings:
   field_group:
     group_metadata:
@@ -29,7 +31,7 @@ third_party_settings:
         - field_content_licenses
         - field_copyright_information
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: details
       format_settings:
         label: Metadata
@@ -105,6 +107,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   field_topics:
     weight: 12
     settings: {  }
