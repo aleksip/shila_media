@@ -4,10 +4,15 @@ dependencies:
   config:
     - core.entity_view_mode.media.quarter
     - field.field.media.image.field_caption
+    - field.field.media.image.field_content_licenses
+    - field.field.media.image.field_copyright_information
+    - field.field.media.image.field_countries_and_regions
     - field.field.media.image.field_credit_organizations
     - field.field.media.image.field_credit_people
     - field.field.media.image.field_image
     - field.field.media.image.field_image_type
+    - field.field.media.image.field_keywords
+    - field.field.media.image.field_link
     - field.field.media.image.field_mime_type
     - media_entity.bundle.image
     - responsive_image.styles.quarter
@@ -68,7 +73,12 @@ content:
     type: responsive_image
 hidden:
   created: true
+  field_content_licenses: true
+  field_copyright_information: true
+  field_countries_and_regions: true
   field_image_type: true
+  field_keywords: true
+  field_link: true
   field_mime_type: true
   langcode: true
   name: true
