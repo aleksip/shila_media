@@ -9,11 +9,13 @@ dependencies:
     - field.field.media.image.field_countries_and_regions
     - field.field.media.image.field_credit_organizations
     - field.field.media.image.field_credit_people
+    - field.field.media.image.field_date
     - field.field.media.image.field_image
     - field.field.media.image.field_image_type
     - field.field.media.image.field_keywords
     - field.field.media.image.field_link
     - field.field.media.image.field_mime_type
+    - field.field.media.image.field_topics
     - media_entity.bundle.image
     - responsive_image.styles.full
   module:
@@ -76,10 +78,12 @@ hidden:
   field_content_licenses: true
   field_copyright_information: true
   field_countries_and_regions: true
+  field_date: true
   field_image_type: true
   field_keywords: true
   field_link: true
   field_mime_type: true
+  field_topics: true
   langcode: true
   name: true
   thumbnail: true

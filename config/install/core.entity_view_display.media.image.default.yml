@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.image.field_countries_and_regions
     - field.field.media.image.field_credit_organizations
     - field.field.media.image.field_credit_people
+    - field.field.media.image.field_date
     - field.field.media.image.field_image
     - field.field.media.image.field_image_type
     - field.field.media.image.field_keywords
@@ -18,7 +19,6 @@ dependencies:
   module:
     - ds
     - image
-    - link
 third_party_settings:
   ds:
     layout:
@@ -49,26 +49,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-  field_content_licenses:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  field_copyright_information:
-    weight: 13
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-  field_countries_and_regions:
-    weight: 9
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
   field_credit_organizations:
     weight: 8
     label: hidden
@@ -95,35 +75,17 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_keywords:
-    weight: 10
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  field_link:
-    weight: 14
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-  field_topics:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
 hidden:
   created: true
+  field_content_licenses: true
+  field_copyright_information: true
+  field_countries_and_regions: true
+  field_date: true
   field_image_type: true
+  field_keywords: true
+  field_link: true
   field_mime_type: true
+  field_topics: true
   langcode: true
   name: true
   thumbnail: true
