@@ -54,6 +54,7 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_caption:
     weight: 5
     settings:
@@ -61,11 +62,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_content_licenses:
     weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_copyright_information:
     weight: 13
     settings:
@@ -73,11 +76,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   field_countries_and_regions:
     weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_credit_organizations:
     weight: 7
     settings:
@@ -86,6 +91,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_credit_people:
     weight: 6
     settings:
@@ -94,11 +100,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_date:
     weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
   field_image:
     weight: 4
     settings:
@@ -106,16 +114,19 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_image_type:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_keywords:
     weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_link:
     weight: 14
     settings:
@@ -123,16 +134,19 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_topics:
     weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   name:
     type: string_textfield
     weight: 0
@@ -140,6 +154,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -148,5 +163,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   field_mime_type: true
