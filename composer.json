@@ -1,0 +1,25 @@
+{
+    "name": "aleksip/shila_media",
+    "type": "drupal-module",
+    "description": "Provides Media bundles",
+    "keywords": ["drupal", "module", "features"],
+    "homepage": "https://github.com/aleksip/shila_media",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Aleksi Peebles"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "aleksip/shila_core": "dev-master",
+        "aleksip/shila_image_styles": "dev-master",
+        "drupal/ds": "~3.0",
+        "drupal/entity_browser": "~1.0",
+        "drupal/field_group": "~1.0",
+        "drupal/media_entity": "~1.6",
+        "drupal/media_entity_document": "~1.1",
+        "drupal/media_entity_image": "~1.2",
+        "drupal/video_embed_field": "~1.5"
+    }
+}
