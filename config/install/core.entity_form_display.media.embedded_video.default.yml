@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.embedded_video.field_media_video_embed_field
     - media_entity.bundle.embedded_video
   module:
+    - path
     - video_embed_field
 id: media.embedded_video.default
 targetEntityType: media
@@ -66,6 +67,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
