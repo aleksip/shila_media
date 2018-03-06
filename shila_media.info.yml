@@ -20,6 +20,8 @@ dependencies:
   - shila_core
   - shila_image_styles
   - taxonomy
+  - ui_patterns_layouts
+  - ui_patterns_library
   - user
   - video_embed_field
   - video_embed_media
