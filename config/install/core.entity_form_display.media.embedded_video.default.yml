@@ -8,8 +8,26 @@ dependencies:
     - field.field.media.embedded_video.field_media_video_embed_field
     - media_entity.bundle.embedded_video
   module:
+    - field_group
     - path
     - video_embed_field
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - langcode
+        - uid
+        - created
+        - path
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Metadata
 id: media.embedded_video.default
 targetEntityType: media
 bundle: embedded_video
@@ -56,7 +74,8 @@ content:
   langcode:
     type: language_select
     weight: 2
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   name:
