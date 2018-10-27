@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_caption
+    - field.field.media.remote_video.field_content_licenses
+    - field.field.media.remote_video.field_copyright_information
+    - field.field.media.remote_video.field_countries_and_regions
+    - field.field.media.remote_video.field_credit_organizations
+    - field.field.media.remote_video.field_credit_people
+    - field.field.media.remote_video.field_date
+    - field.field.media.remote_video.field_keywords
+    - field.field.media.remote_video.field_link
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_topics
+    - media.type.remote_video
+  module:
+    - media
+id: media.remote_video.default
+targetEntityType: media
+bundle: remote_video
+mode: default
+content:
+  field_caption:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_media_oembed_video:
+    type: oembed
+    weight: 0
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_content_licenses: true
+  field_copyright_information: true
+  field_countries_and_regions: true
+  field_credit_organizations: true
+  field_credit_people: true
+  field_date: true
+  field_keywords: true
+  field_link: true
+  field_topics: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

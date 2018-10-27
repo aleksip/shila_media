@@ -2,25 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.document.field_file
-    - field.field.media.document.field_mime_type
-    - media_entity.bundle.document
+    - field.field.media.video.field_media_video_file
+    - media.type.video
   module:
     - file
     - path
-id: media.document.default
+id: media.video.default
 targetEntityType: media
-bundle: document
+bundle: video
 mode: default
 content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_file:
-    weight: 11
+  field_media_video_file:
+    weight: 0
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -29,22 +28,30 @@ content:
   langcode:
     type: language_select
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
     region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: -5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 30
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
@@ -53,7 +60,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
     region: content
-hidden:
-  field_mime_type: true
+    third_party_settings: {  }
+hidden: {  }

@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_credit_people
-    - media_entity.bundle.embedded_video
-    - taxonomy.vocabulary.people
-id: media.embedded_video.field_credit_people
-field_name: field_credit_people
+    - field.storage.media.field_keywords
+    - media.type.remote_video
+    - taxonomy.vocabulary.keywords
+id: media.remote_video.field_keywords
+field_name: field_keywords
 entity_type: media
-bundle: embedded_video
-label: 'Credit (People)'
+bundle: remote_video
+label: Keywords
 description: ''
 required: false
 translatable: true
@@ -19,9 +19,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      people: people
+      keywords: keywords
     sort:
-      field: _none
-    auto_create: true
+      field: name
+      direction: asc
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

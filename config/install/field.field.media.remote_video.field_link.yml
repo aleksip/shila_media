@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_link
-    - media.type.image
+    - media.type.remote_video
   module:
     - link
-id: media.image.field_link
+id: media.remote_video.field_link
 field_name: field_link
 entity_type: media
-bundle: image
+bundle: remote_video
 label: Link
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

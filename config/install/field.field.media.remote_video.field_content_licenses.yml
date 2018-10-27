@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_content_licenses
-    - media.type.image
+    - media.type.remote_video
     - taxonomy.vocabulary.content_licenses
-id: media.image.field_content_licenses
+id: media.remote_video.field_content_licenses
 field_name: field_content_licenses
 entity_type: media
-bundle: image
+bundle: remote_video
 label: 'Content licenses'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -21,7 +21,8 @@ settings:
     target_bundles:
       content_licenses: content_licenses
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

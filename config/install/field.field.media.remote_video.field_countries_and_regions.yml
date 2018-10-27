@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_countries_and_regions
-    - media.type.image
+    - media.type.remote_video
     - taxonomy.vocabulary.countries_and_regions
-id: media.image.field_countries_and_regions
+id: media.remote_video.field_countries_and_regions
 field_name: field_countries_and_regions
 entity_type: media
-bundle: image
+bundle: remote_video
 label: 'Countries and regions'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -21,7 +21,8 @@ settings:
     target_bundles:
       countries_and_regions: countries_and_regions
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

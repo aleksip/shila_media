@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_copyright_information
-    - media.type.image
-id: media.image.field_copyright_information
+    - media.type.remote_video
+id: media.remote_video.field_copyright_information
 field_name: field_copyright_information
 entity_type: media
-bundle: image
+bundle: remote_video
 label: 'Copyright information'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_date
-    - media.type.image
+    - media.type.remote_video
   module:
     - datetime
-id: media.image.field_date
+id: media.remote_video.field_date
 field_name: field_date
 entity_type: media
-bundle: image
+bundle: remote_video
 label: Date
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

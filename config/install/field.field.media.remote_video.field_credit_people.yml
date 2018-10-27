@@ -2,26 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_credit_organizations
-    - media.type.image
-    - taxonomy.vocabulary.organizations
-id: media.image.field_credit_organizations
-field_name: field_credit_organizations
+    - field.storage.media.field_credit_people
+    - media.type.remote_video
+    - taxonomy.vocabulary.people
+id: media.remote_video.field_credit_people
+field_name: field_credit_people
 entity_type: media
-bundle: image
-label: 'Credit (Organizations)'
+bundle: remote_video
+label: 'Credit (People)'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      organizations: organizations
+      people: people
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

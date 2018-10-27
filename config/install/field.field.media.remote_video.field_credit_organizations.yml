@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_credit_organizations
-    - media_entity.bundle.embedded_video
+    - media.type.remote_video
     - taxonomy.vocabulary.organizations
-id: media.embedded_video.field_credit_organizations
+id: media.remote_video.field_credit_organizations
 field_name: field_credit_organizations
 entity_type: media
-bundle: embedded_video
+bundle: remote_video
 label: 'Credit (Organizations)'
 description: ''
 required: false
@@ -21,7 +21,8 @@ settings:
     target_bundles:
       organizations: organizations
     sort:
-      field: _none
+      field: name
+      direction: asc
     auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

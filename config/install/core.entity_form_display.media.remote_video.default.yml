@@ -2,25 +2,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_caption
-    - field.field.media.image.field_content_licenses
-    - field.field.media.image.field_copyright_information
-    - field.field.media.image.field_countries_and_regions
-    - field.field.media.image.field_credit_organizations
-    - field.field.media.image.field_credit_people
-    - field.field.media.image.field_date
-    - field.field.media.image.field_image_type
-    - field.field.media.image.field_keywords
-    - field.field.media.image.field_link
-    - field.field.media.image.field_media_image
-    - field.field.media.image.field_topics
-    - image.style.thumbnail
-    - media.type.image
+    - field.field.media.remote_video.field_caption
+    - field.field.media.remote_video.field_content_licenses
+    - field.field.media.remote_video.field_copyright_information
+    - field.field.media.remote_video.field_countries_and_regions
+    - field.field.media.remote_video.field_credit_organizations
+    - field.field.media.remote_video.field_credit_people
+    - field.field.media.remote_video.field_date
+    - field.field.media.remote_video.field_keywords
+    - field.field.media.remote_video.field_link
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_topics
+    - media.type.remote_video
   module:
     - datetime
     - field_group
-    - image
     - link
+    - media
 third_party_settings:
   field_group:
     group_copyright_information:
@@ -31,7 +29,7 @@ third_party_settings:
         - field_link
         - field_copyright_information
       parent_name: ''
-      weight: 20
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -42,13 +40,12 @@ third_party_settings:
       region: content
     group_metadata:
       children:
-        - field_image_type
         - field_topics
         - field_keywords
         - field_countries_and_regions
         - field_date
       parent_name: ''
-      weight: 20
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -57,97 +54,91 @@ third_party_settings:
         required_fields: true
       label: Metadata
       region: content
-id: media.image.default
+id: media.remote_video.default
 targetEntityType: media
-bundle: image
+bundle: remote_video
 mode: default
 content:
   field_caption:
-    type: string_textarea
     weight: 2
-    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_content_licenses:
-    type: options_select
-    weight: 2
-    region: content
+    weight: 5
     settings: {  }
     third_party_settings: {  }
-  field_copyright_information:
-    type: string_textarea
-    weight: 4
+    type: options_select
     region: content
+  field_copyright_information:
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_countries_and_regions:
-    type: options_select
-    weight: 3
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   field_credit_organizations:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_credit_people:
-    type: entity_reference_autocomplete
-    weight: 0
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_date:
-    type: datetime_default
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_image_type:
-    type: options_select
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_keywords:
-    type: options_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_link:
-    type: link_default
     weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
+  field_credit_people:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_keywords:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link:
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_media_image:
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
+    type: link_default
+    region: content
+  field_media_oembed_video:
+    type: oembed_textfield
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
     region: content
   field_topics:
-    type: options_select
-    weight: 1
-    region: content
+    weight: 8
     settings: {  }
     third_party_settings: {  }
+    type: options_select
+    region: content
   name:
     type: string_textfield
     weight: 0
