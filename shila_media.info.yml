@@ -1,6 +1,7 @@
 name: 'Shila Media'
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Shila
 description: 'Provides Media types.'
 dependencies:
