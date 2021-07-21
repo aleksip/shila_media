@@ -1,20 +1,17 @@
 name: 'Shila Media'
 type: module
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: '^8.9 || ^9'
 package: Shila
 description: 'Provides Media types.'
 dependencies:
-  - datetime
-  - field
-  - field_group
-  - file
-  - image
-  - language
-  - link
-  - media
-  - path
-  - responsive_image
-  - shila_core
-  - shila_image_styles
-  - taxonomy
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:file'
+  - 'drupal:image'
+  - 'drupal:link'
+  - 'drupal:media'
+  - 'drupal:path'
+  - 'drupal:responsive_image'
+  - 'drupal:taxonomy'
+  - 'shila_image_styles:shila_image_styles'
+  - 'shila_taxonomies:shila_taxonomies'

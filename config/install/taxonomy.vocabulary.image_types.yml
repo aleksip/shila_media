@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Image types'
 vid: image_types
 description: ''
-hierarchy: 0
 weight: 0

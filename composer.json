@@ -11,9 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "aleksip/shila_core": "dev-master",
-        "aleksip/shila_image_styles": "dev-master",
-        "drupal/field_group": "~3.0"
+        "php": ">=7.3",
+        "aleksip/shila_image_styles": "dev-master"
     }
 }
